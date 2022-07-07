@@ -1,9 +1,9 @@
 /*=========================NAVBAR================================*/
 .menu {
     li {
-        a {
+        .nav-link {
             display: flex;
-            color: $clr-bg;
+            color: $clr-white;
             text-decoration: none;
             padding: 0px 20px;
             text-align: center;
@@ -11,14 +11,14 @@
                 background-color: $clr-trans;
                 color: $clr-white;
                 transition: ease-in .2s;
-                border: 1px solid #ffffff;
+                
             }
         }
     }
 }
 
 .title-span {
-    color: rgb(87, 0, 169);
+    color: $clr-tertiary;
 }
 
 .bg-navbar {

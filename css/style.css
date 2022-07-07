@@ -120,6 +120,9 @@ body {
   width: 90%;
   margin: auto auto 30px auto;
 }
+.ubicacion iframe {
+  width: 100%;
+}
 .ubicacion h2 {
   display: flex;
   flex-direction: column;
@@ -128,22 +131,21 @@ body {
 }
 
 /*=========================NAVBAR================================*/
-.menu li a {
+.menu li .nav-link {
   display: flex;
-  color: #dca8f5;
+  color: #ffffff;
   text-decoration: none;
   padding: 0px 20px;
   text-align: center;
 }
-.menu li a:hover {
-  background-color: rgba(135, 84, 202, 0.5137254902);
-  color: white;
+.menu li .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.5137254902);
+  color: #ffffff;
   transition: ease-in 0.2s;
-  border: 1px solid #ffffff;
 }
 
 .title-span {
-  color: rgb(87, 0, 169);
+  color: #5900b9;
 }
 
 .bg-navbar {
@@ -162,14 +164,14 @@ footer {
   min-height: 100px;
 }
 footer p {
-  color: white;
+  color: #ffffff;
   text-align: center;
 }
 
 #iconos i {
   font-size: 26px;
   padding: 0 8px;
-  color: white;
+  color: #ffffff;
 }
 
 /*# sourceMappingURL=style.css.map */
