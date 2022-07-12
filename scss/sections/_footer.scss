@@ -1,11 +1,14 @@
 /*=========================FOOTER================================*/
 
 footer {
-    background-color: $clr-bg-header;
+    
+    
+    background-color: $clr-4;
     min-height: 100px;
+    
 
     p {
-        color: $clr-white;
+        color: $clr-1;
         text-align: center;
     }
 }
@@ -15,7 +18,7 @@ footer {
     i {
         font-size: 26px;
         padding: 0 8px;
-        color: $clr-white;
+        color: $clr-1;
 
     }
 

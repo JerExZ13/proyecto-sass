@@ -1,15 +1,15 @@
 /*=========================NAVBAR================================*/
 .menu {
     li {
-        .nav-link {
+        .navLink {
             display: flex;
-            color: $clr-white;
+            color: $clr-1;
             text-decoration: none;
             padding: 0px 20px;
             text-align: center;
             &:hover{
-                background-color: $clr-trans;
-                color: $clr-white;
+                background-color: $clr-3;
+                color: $clr-4;
                 transition: ease-in .2s;
                 
             }
@@ -18,12 +18,12 @@
 }
 
 .title-span {
-    color: $clr-tertiary;
+    color: $clr-1;
 }
 
 .bg-navbar {
-    background-color: $clr-bg-header;
-    background-image: $clr-primary;
+    background-color: $clr-4;
+    background-image: $clr-1;
 
 }
 

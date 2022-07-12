@@ -1,0 +1,155 @@
+// for declaring spans
+@mixin make-span(
+  $number,
+  $angle,
+  $zero-val,
+  $neg-value,
+  $width,
+  $height,
+  $anime,
+  $delay
+) {
+  span:nth-child(#{$number}) {
+    background: linear-gradient(#{$angle}, transparent, #03e9f4);
+    #{$zero-val}: 0;
+    #{$neg-value}: -100%;
+    width: #{$width};
+    height: #{$height};
+    animation: ($time) #{$anime} linear infinite;
+    animation-delay: #{$delay};
+  }
+}
+
+// for span animations
+@mixin keyframe-replace($direction, $element) {
+  @keyframes #{$element} {
+    0% {
+      #{$direction}: -100%;
+    }
+    50%,
+    100% {
+      #{$direction}: 100%;
+    }
+  }
+}
+
+$time: 2s;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient($clr-2, $clr-6);
+}
+a {
+  overflow: hidden;
+}
+
+.outerParent {
+  width: 400px;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+
+  h2 {
+    text-align: center;
+    color: white;
+    margin: 0 0 2rem;
+  }
+
+  .user-box {
+    position: relative;
+    margin-bottom: 1rem;
+
+    input {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #fff;
+      width: 100%;
+      margin-bottom: 2rem;
+      font-size: 16px;
+      padding: 3px;
+      color: white;
+      outline: none;
+      // -moz-outline: none;
+    }
+
+    label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: white;
+      transition: all 0.3s ease;
+      pointer-events: none;
+    }
+    input:valid ~ label,
+    input:focus ~ label {
+      top: -20px;
+      left: 0;
+      color: #03e9f4;
+      font-size: 12px;
+      outline: none;
+    }
+  }
+  a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 10px;
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease;
+    cursor:pointer;
+
+    span {
+      position: absolute;
+      display: block;
+    }
+
+    @include make-span(1, 90deg, top, left, 100%, 2px, span1, ($time * 0/4));
+    @include make-span(2, 180deg, right, top, 2px, 100%, span2, ($time * 1/4));
+    @include make-span(
+      3,
+      270deg,
+      bottom,
+      right,
+      100%,
+      2px,
+      span3,
+      ($time * 2/4)
+    );
+    @include make-span(
+      4,
+      360deg,
+      left,
+      bottom,
+      2px,
+      100%,
+      span4,
+      ($time * 3/4)
+    );
+  }
+
+  a:hover {
+    background: #03e9f4;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+      0 0 100px #03e9f4;
+  }
+}
+
+@include keyframe-replace(left, span1);
+@include keyframe-replace(top, span2);
+@include keyframe-replace(right, span3);
+@include keyframe-replace(bottom, span4);
