@@ -1,22 +1,19 @@
 /* Color Theme Swatches in Hex */
+$clr-1: #F2508B;
+$clr-2: #96D9D9;
+$clr-3: #F2B705;
+$clr-4: #BF8845;
+$clr-5: #D98B8B;
 
-$clr-1: #F249A6;
-$clr-2: #F299D3;
-$clr-3: #F2BA52;
-$clr-4: #735340;
-$clr-5: #BFA08E;
-$clr-6: #994aff;
-$clr-black: #283040;
 $clr-white: #ffffff;
+$clr-black: #283040;
 $clr-yellow: #f2b705;
-$clr-orange: #d97904;
-$clr-red: #d90404;
-$clr-wine: #8c0303;
+$clr-bg: #000000;
 $clr-bg-header: #8b64b8;
+$clr-primary: #9274e5;
+$clr-secondary: #775032;
+$clr-tertiary: #5900b9;
 $clr-trans: #ffffff83;
-
-// TIME //
-$time: 2s;
 
 /* FONTS */
 @import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Poppins:wght@400;500;700&display=swap");
@@ -26,7 +23,3 @@ $ff-alfa: "Alfa Slab One", cursive;
 
 /* Borders */
 $borderRadius: 0.25rem;
-
-// SHADOW //
-$box-shadow: 0 2px 10px 0 rgba(0,0,0,0.6);
-
